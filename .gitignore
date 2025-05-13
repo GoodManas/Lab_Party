@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+venv/
+db/
+compiled/
+res_rs_rc.py
+test/

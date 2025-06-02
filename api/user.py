@@ -6,7 +6,7 @@ import sqlite3
 def login(login: str, passw: str):
 
 	value = db.execute(f'''
-		SELECT id_users, login, password, dol, start_day FROM users 
+		SELECT id_users, login, password, id_role FROM users 
 		WHERE login='{login}' AND password='{passw}'; 
 	''').fetchone()
 
@@ -16,8 +16,7 @@ def login(login: str, passw: str):
 		return {
         	'id_users': value[0],
             'login': value[1],
-            'dol': value[3],
-            'start_day': value[4],
+            'id_role': value[3],
         }
 	raise Exception(f'Unauthorized: User with login "{login}" not found or wrong password')
 

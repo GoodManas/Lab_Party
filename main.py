@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 import sys
+=======
+>>>>>>> 0ed131c8c4f4ee61afdacb1e661213b759078a65
 import os
 import MySQLdb as mdb
 
@@ -114,5 +117,11 @@ class Register(QMainWindow):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = Register()
+<<<<<<< HEAD
     window.show()
     sys.exit(app.exec())
+=======
+    window.show()   
+    sys.exit(app.exec())
+>>>>>>> 96d59d092d4628cbb9b37fcbebd145eb19b60051
+>>>>>>> 0ed131c8c4f4ee61afdacb1e661213b759078a65

@@ -33,8 +33,19 @@ def register(login, passw):
 	db.commit()
  
 def get_all_users():  
-    value = db.execute('SELECT * FROM users;').fetchall()
+    value = db.execute('SELECT * FROM bookings;').fetchall()
     return value
+
+def add_bron(id):
+	db.execute(f"INSERT INTO bookings(resource_id) VALUES ('{id}')")
+	db.commit()
+
+def uchet(name,room):
+	db.execute(f"INSERT INTO bookings(user_id, resource_id) VALUES ('{name}', '{room}')")
+	
+	db.commit()
+	
+	
 
 #===============================================================================
 
